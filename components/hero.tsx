@@ -73,11 +73,6 @@ export default function Hero() {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-5 w-5" />
-                </a>
-              </Button>
             </div>
           </motion.div>
 
