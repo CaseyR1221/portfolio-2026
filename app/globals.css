@@ -31,6 +31,23 @@
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
 
+  /* Custom tennis palette */
+  --color-court-green: #12372a;
+  --color-forest-green: #1f5a44;
+  --color-club-green: #34745a;
+
+  --color-championship-gold: #c9a227;
+  --color-muted-gold: #d5b85a;
+
+  --color-ivory: #f7f4ea;
+  --color-court-white: #fffdf7;
+  --color-stone: #e5e1d6;
+
+  --color-night-court: #09140f;
+
+  /* Optional playful accent */
+  --color-tennis-ball: #d6e75a;
+
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -44,14 +61,17 @@
     from {
       height: 0;
     }
+
     to {
       height: var(--radix-accordion-content-height);
     }
   }
+
   @keyframes accordion-up {
     from {
       height: var(--radix-accordion-content-height);
     }
+
     to {
       height: 0;
     }
@@ -65,48 +85,118 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
+    /*
+     * LIGHT MODE
+     *
+     * Warm ivory + deep court green + championship gold.
+     */
+
+    --background: 47 45% 94%;
+    --foreground: 150 17% 11%;
+
+    --card: 45 100% 98%;
+    --card-foreground: 150 17% 11%;
+
+    --popover: 45 100% 98%;
+    --popover-foreground: 150 17% 11%;
+
+    /*
+     * Deep Court Green
+     * #12372A
+     */
+    --primary: 159 51% 14%;
+    --primary-foreground: 45 100% 98%;
+
+    /*
+     * Soft warm neutral
+     */
+    --secondary: 43 30% 90%;
+    --secondary-foreground: 159 51% 14%;
+
+    /*
+     * Subtle neutral sections / backgrounds
+     */
+    --muted: 43 25% 92%;
+    --muted-foreground: 148 9% 36%;
+
+    /*
+     * Championship Gold
+     * #C9A227
+     */
+    --accent: 46 68% 47%;
+    --accent-foreground: 150 17% 11%;
+
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 262.1 83.3% 57.8%;
+
+    /*
+     * Warm stone borders
+     */
+    --border: 43 20% 83%;
+    --input: 43 20% 83%;
+
+    /*
+     * Club Green focus rings
+     */
+    --ring: 159 38% 33%;
+
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    /*
+     * DARK MODE
+     *
+     * Green-black base + cream text + rich gold.
+     */
+
+    --background: 150 38% 6%;
+    --foreground: 47 45% 94%;
+
+    /*
+     * Elevated dark green surface
+     */
+    --card: 150 38% 10%;
+    --card-foreground: 47 45% 94%;
+
+    --popover: 150 38% 10%;
+    --popover-foreground: 47 45% 94%;
+
+    /*
+     * Soft grass green
+     */
+    --primary: 145 25% 49%;
+    --primary-foreground: 150 38% 6%;
+
+    /*
+     * Secondary dark green surface
+     */
+    --secondary: 150 34% 14%;
+    --secondary-foreground: 47 45% 94%;
+
+    --muted: 150 25% 14%;
+    --muted-foreground: 144 8% 69%;
+
+    /*
+     * Muted Gold
+     * #D5B85A
+     */
+    --accent: 46 59% 59%;
+    --accent-foreground: 150 38% 6%;
+
+    --destructive: 0 62% 42%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 263.4 70% 50.4%;
+
+    /*
+     * Green-tinted borders
+     */
+    --border: 149 26% 21%;
+    --input: 149 26% 21%;
+
+    /*
+     * Gold focus ring
+     */
+    --ring: 46 59% 59%;
   }
 }
 
@@ -114,6 +204,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -128,6 +219,7 @@
   to {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }

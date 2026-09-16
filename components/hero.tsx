@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
 import { motion } from "framer-motion"
@@ -62,19 +63,24 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-4 mt-8">
-              <Button variant="ghost" size="icon" className="rounded-full" asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full text-championship-gold hover:text-championship-gold hover:bg-championship-gold/10"
+                asChild
+              >
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full" asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full text-championship-gold hover:text-championship-gold hover:bg-championship-gold/10"
+                asChild
+              >
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-5 w-5" />
                 </a>
               </Button>
             </div>
@@ -84,14 +90,17 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative aspect-square max-w-md mx-auto"
+            className="relative hidden md:block aspect-square w-full max-w-md mx-auto"
           >
             <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-primary/5 rounded-full"></div>
             <div className="absolute inset-4 bg-muted rounded-full overflow-hidden">
-              <img
-                src="/placeholder.svg?height=400&width=400"
-                alt="CaseyCodes"
-                className="w-full h-full object-cover"
+              <Image
+                src="/images/me.jpg"
+                alt="Portrait illustration of Casey"
+                fill
+                sizes="(min-width: 768px) 28rem, 0px"
+                className="object-cover"
+                priority
               />
             </div>
           </motion.div>

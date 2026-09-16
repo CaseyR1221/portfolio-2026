@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-lg font-bold text-primary">
-              Casey<span className="text-destructive">Codes</span>
+              Casey<span className="text-championship-gold">Codes</span>
             </p>
           </div>
           <div className="text-center md:text-right">
