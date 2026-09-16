@@ -63,9 +63,9 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-4 mt-8">
-              <Button variant="ghost" size="icon" className="rounded-full text-shadow-championship-gold" asChild>
+              <Button variant="ghost" size="icon" className="rounded-full" asChild>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5" />
+                  <Github className="h-5 w-5 text-shadow-championship-gold" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full" asChild>
