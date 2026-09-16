@@ -63,12 +63,22 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-4 mt-8">
-              <Button variant="ghost" size="icon" className="rounded-full" asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full text-championship-gold hover:text-championship-gold hover:bg-championship-gold/10"
+                asChild
+              >
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full" asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full text-championship-gold hover:text-championship-gold hover:bg-championship-gold/10"
+                asChild
+              >
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
