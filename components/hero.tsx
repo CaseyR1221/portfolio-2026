@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
 import { motion } from "framer-motion"
@@ -84,14 +85,17 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative aspect-square max-w-md mx-auto"
+            className="relative hidden md:block aspect-square w-full max-w-md mx-auto"
           >
             <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-primary/5 rounded-full"></div>
             <div className="absolute inset-4 bg-muted rounded-full overflow-hidden">
-              <img
-                src="/placeholder.svg?height=400&width=400"
-                alt="CaseyCodes"
-                className="w-full h-full object-cover"
+              <Image
+                src="/images/me.jpg"
+                alt="Portrait illustration of Casey"
+                fill
+                sizes="(min-width: 768px) 28rem, 0px"
+                className="object-cover"
+                priority
               />
             </div>
           </motion.div>
